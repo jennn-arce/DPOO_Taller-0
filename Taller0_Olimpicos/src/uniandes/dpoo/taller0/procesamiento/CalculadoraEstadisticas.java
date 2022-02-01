@@ -444,4 +444,26 @@ public class CalculadoraEstadisticas
 		return nombres;
 	}
 
+
+	/**
+	 * MODIFICACIÓN TALLER 0
+	 * 
+	 * Se busca el país de un atleta en específico
+	 *  @param nombreAtleta El nombre del atleta que se está buscando
+	 *  @return String que representa el país de la atleta
+	 */
+
+	public String paisAtleta(String nombreAtleta)
+	{
+		Atleta elAtleta = buscarAtleta(nombreAtleta);
+		String paisAtleta = "NA"; 
+		if (elAtleta != null)
+		{
+			paisAtleta = (elAtleta.darPais()).toString();
+		}
+		return paisAtleta;
+	}
+
 }
+
+

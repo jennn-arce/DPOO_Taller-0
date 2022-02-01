@@ -62,7 +62,9 @@ public class ConsolaOlimpicos
 					ejecutarMedallistasPorNacionYGenero();
 				else if (opcion_seleccionada == 12 && calculadora != null)
 					ejecutarPorcentajeMedallistas();
-				else if (opcion_seleccionada == 13)
+				else if (opcion_seleccionada == 13 && calculadora != null)
+					ejecutarPaisAtleta();
+				else if (opcion_seleccionada == 14)
 				{
 					System.out.println("Saliendo de la aplicaciÃ³n ...");
 					continuar = false;
@@ -102,9 +104,33 @@ public class ConsolaOlimpicos
 		System.out.println("10. Consultar el atleta todoterreno");
 		System.out.println("11. Consultar los medallistas por paÃ­s y gÃ©nero");
 		System.out.println("12. Consultar el porcentaje de atletas que son medallistas");
-		System.out.println("13. Salir de la aplicaciÃ³n\n");
+		System.out.println("13. Consultar el país de un atleta (MODIFICACIÓN TALLER 0)");
+		System.out.println("14. Salir de la aplicaciÃ³n\n");
 	}
 
+
+	/**
+	 * !!MODIFICACIÓN TALLER 0
+	 * Se pregunta al usuario el nombre de un atleta para así buscarlo
+	 */	
+	
+	private void ejecutarPaisAtleta()
+	{
+		System.out.println("\n" + "Búsqueda del país de un atleta" + "\n");
+
+		String nombreAtleta = input("Ingrese el nombre del atleta ");
+		String paisAtleta = calculadora.paisAtleta(nombreAtleta);
+		if (paisAtleta == "NA")
+		{
+			System.out.println("El nombre del atleta y/o su país no fue encontrado");
+		}
+		else
+		{
+			System.out.println("El país del atleta con nombre: "+nombreAtleta+" es: " + paisAtleta);
+		}
+		
+	}
+	
 	/**
 	 * Le muestra el usuario el porcentaje de atletas que son medallistas
 	 */
