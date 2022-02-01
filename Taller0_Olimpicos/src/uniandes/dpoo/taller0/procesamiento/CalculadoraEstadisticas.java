@@ -459,7 +459,7 @@ public class CalculadoraEstadisticas
 		String paisAtleta = "NA"; 
 		if (elAtleta != null)
 		{
-			paisAtleta = (elAtleta.darPais()).toString();
+			paisAtleta = (elAtleta.darPais().darNombre());
 		}
 		return paisAtleta;
 	}

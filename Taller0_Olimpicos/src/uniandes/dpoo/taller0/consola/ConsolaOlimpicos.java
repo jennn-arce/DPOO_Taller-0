@@ -126,7 +126,7 @@ public class ConsolaOlimpicos
 		}
 		else
 		{
-			System.out.println("El país del atleta con nombre: "+nombreAtleta+" es: " + paisAtleta);
+			System.out.println("El país del atleta "+nombreAtleta+" es: " + paisAtleta);
 		}
 		
 	}
